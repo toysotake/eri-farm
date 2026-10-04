@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b2c">
+  <meta name="description" content="千葉県佐倉市のエリー農園。農園の場所と地図、道順をご案内します。">
+  <title>エリー農園｜場所・アクセス案内</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --forest: #123b2c;
+      --forest-2: #1d5740;
+      --leaf: #c9eb54;
+      --paper: #f5f7ee;
+      --white: #fff;
+      --ink: #17231d;
+      --muted: #5e6b63;
+      --line: #dce3d8;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      font-size: 16px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.7; }
+    a { color: inherit; }
+    .wrap { width: min(100% - 36px, 1060px); margin-inline: auto; }
+    .topbar { background: var(--forest); color: #fff; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 70px; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: #fff; text-decoration: none; font-weight: 750; letter-spacing: .04em; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--leaf); color: var(--forest); font-size: 15px; font-weight: 900; }
+    .top-label { color: #d9e8dc; font-size: 14px; letter-spacing: .12em; }
+    main { padding: 56px 0 76px; }
+    .intro { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 28px; padding-bottom: 32px; }
+    .eyebrow { margin: 0 0 8px; color: var(--forest-2); font-size: 14px; font-weight: 800; letter-spacing: .15em; }
+    h1 { margin: 0; color: var(--forest); font-size: clamp(38px, 6vw, 64px); letter-spacing: .025em; line-height: 1.15; }
+    .intro-copy { max-width: 550px; margin: 18px 0 0; color: #415047; font-size: 18px; }
+    .leaf-stamp { display: grid; place-items: center; width: 110px; height: 110px; border-radius: 50%; background: var(--leaf); color: var(--forest); font-size: 14px; font-weight: 800; line-height: 1.35; text-align: center; transform: rotate(7deg); }
+    .location-card { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--white); box-shadow: 0 18px 48px rgb(18 59 44 / 9%); }
+    .map-frame { min-height: 430px; background: #dbe6d9; }
+    .map-frame iframe { display: block; width: 100%; height: 100%; min-height: 430px; border: 0; }
+    .location-info { display: flex; flex-direction: column; justify-content: center; padding: clamp(26px, 5vw, 54px); }
+    .section-tag { margin: 0 0 8px; color: var(--forest-2); font-size: 14px; font-weight: 800; letter-spacing: .13em; }
+    h2 { margin: 0; color: var(--forest); font-size: 30px; line-height: 1.35; }
+    .address { margin: 10px 0 22px; color: var(--muted); font-size: 16px; }
+    .coord-box { padding: 13px 16px; border-left: 4px solid var(--leaf); background: #f3f7e9; color: #344339; font-size: 14px; }
+    .coord-box strong { display: block; margin-bottom: 2px; color: var(--forest); font-size: 14px; }
+    .actions { display: grid; gap: 11px; margin-top: 22px; }
+    .button { display: flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 18px; border: 2px solid var(--forest); border-radius: 12px; background: var(--forest); color: #fff; text-align: center; text-decoration: none; font-size: 16px; font-weight: 750; transition: background .16s ease, color .16s ease, transform .16s ease; }
+    .button:hover { background: var(--forest-2); transform: translateY(-1px); }
+    .button.secondary { background: #fff; color: var(--forest); }
+    .button.secondary:hover { background: #f1f6e8; }
+    .map-link { display: inline-block; margin-top: 15px; color: var(--forest-2); font-size: 14px; font-weight: 700; text-underline-offset: 3px; }
+    .visit-note { display: flex; gap: 15px; align-items: flex-start; margin: 22px 0 0; padding: 18px 20px; border-radius: 14px; background: #e8eee5; color: #405146; font-size: 14px; }
+    .visit-note strong { flex: 0 0 auto; color: var(--forest); }
+    footer { padding: 25px 0 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    footer a { color: var(--forest-2); font-weight: 700; text-underline-offset: 3px; }
+    .attribution { margin-top: 8px; font-size: 12px; }
+    .attribution a { color: inherit; font-weight: 500; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 28px, 560px); }
+      .topbar-inner { min-height: 62px; }
+      main { padding: 38px 0 48px; }
+      .intro { grid-template-columns: 1fr; gap: 15px; padding-bottom: 24px; }
+      .intro-copy { font-size: 16px; }
+      .leaf-stamp { display: none; }
+      .location-card { grid-template-columns: 1fr; border-radius: 18px; }
+      .map-frame, .map-frame iframe { min-height: 310px; }
+      .location-info { padding: 26px 22px 28px; }
+      .visit-note { display: block; }
+      .visit-note strong { display: block; margin-bottom: 3px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="エリー農園の案内ページ">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>エリー農園</span>
+      </a>
+      <span class="top-label">CHIBA · SAKURA</span>
+    </div>
+  </header>
+  <main class="wrap" id="top">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">FARM LOCATION GUIDE</p>
+        <h1 id="page-title">エリー農園</h1>
+        <p class="intro-copy">千葉県佐倉市で野菜を育てている農園です。場所はこちらの地図からご確認ください。</p>
+      </div>
+      <div class="leaf-stamp" aria-hidden="true">畑の場所<br>ACCESS</div>
+    </section>
+    <section class="location-card" aria-labelledby="location-title">
+      <div class="map-frame">
+        <iframe title="エリー農園の地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=140.1534%2C35.7355%2C140.1755%2C35.7471&amp;layer=mapnik&amp;marker=35.7412986%2C140.1644232"></iframe>
+      </div>
+      <div class="location-info">
+        <p class="section-tag">LOCATION</p>
+        <h2 id="location-title">農園の場所</h2>
+        <p class="address">千葉県佐倉市</p>
+        <div class="coord-box">
+          <strong>地図のピン</strong>
+          35.7412986, 140.1644232
+        </div>
+        <div class="actions">
+          <a class="button" href="https://www.google.com/maps/dir/?api=1&amp;destination=35.7412986%2C140.1644232" target="_blank" rel="noopener noreferrer">Google マップで道順を見る</a>
+          <a class="button secondary" href="https://maps.apple.com/?daddr=35.7412986,140.1644232" target="_blank" rel="noopener noreferrer">Apple マップで道順を見る</a>
+        </div>
+        <a class="map-link" href="https://www.openstreetmap.org/?mlat=35.7412986&amp;mlon=140.1644232#map=16/35.7412986/140.1644232" target="_blank" rel="noopener noreferrer">OpenStreetMapで地図を大きく見る</a>
+      </div>
+    </section>
+    <p class="visit-note"><strong>ご来園前に</strong><span>地図のピンは共有いただいた座標を表示しています。訪問できる日時や販売については、事前に農園へご確認ください。</span></p>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>エリー農園 · 千葉県佐倉市</span>
+      <a href="https://eri-farm.com/" target="_blank" rel="noopener noreferrer">エリー農園の公式サイト</a>
+    </div>
+    <div class="wrap attribution">地図データ © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a></div>
+  </footer>
+</body>
+</html>
